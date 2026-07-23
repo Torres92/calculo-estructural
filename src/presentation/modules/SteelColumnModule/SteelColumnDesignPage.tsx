@@ -58,7 +58,7 @@ export const SteelColumnDesignPage: React.FC = () => {
       </header>
 
       <main className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 py-6 lg:grid-cols-2 lg:gap-8 sm:px-6">
-        <aside className="flex flex-col gap-4 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto lg:pr-1">
+        <aside className="flex flex-col gap-4 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto lg:pr-1 [scrollbar-gutter:stable]">
           <div>
             <h2 className="text-sm font-bold uppercase tracking-wider text-gray-400">
               Parámetros de diseño
@@ -74,7 +74,7 @@ export const SteelColumnDesignPage: React.FC = () => {
           />
         </aside>
 
-        <section className="flex flex-col gap-6 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto lg:pl-1">
+        <section className="flex flex-col gap-6 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto lg:pl-1 [scrollbar-gutter:stable]">
           <Section2DViewer
             d={inputs.d}
             bf={inputs.bf}
