@@ -1,0 +1,28 @@
+# Dependencies & build
+node_modules/
+dist/
+dist-ssr/
+build/
+coverage/
+.vite/
+*.tsbuildinfo
+
+# Locks (large, rarely useful when indexing)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Editor / VCS noise
+.git/
+.vscode/
+.idea/
+.DS_Store
+*.log
+
+# Media / binarios
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.ico

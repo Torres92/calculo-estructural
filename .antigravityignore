@@ -1,0 +1,15 @@
+node_modules/
+dist/
+build/
+.git/
+.vscode/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.svg
+.DS_Store
+*.log
