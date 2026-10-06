@@ -1,32 +1,42 @@
-# React + TypeScript + Vite
+# Cálculo de columnas
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Software web de cálculo estructural para columnas de acero, basado en **AISC 360-16** (compresión axial Cap. E y flexocompresión biaxial Cap. H).
 
-Currently, two official plugins are available:
+Orientado a ingenieros: entradas a la izquierda, resultados y sección 2D a la derecha, con conversión métrico ↔ inglés sin perder los valores ingresados.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Qué incluye hoy
 
-## React Compiler
+- Compresión axial (KL/r, Fe, Fcr, Pn, φPn, ASD)
+- Interacción biaxial H1-1a / H1-1b (Pu, Mux, Muy)
+- Ratio demanda/capacidad con semáforo (verde / amarillo / rojo)
+- Visualizador SVG de sección W a escala con cotas
+- Unidades métricas (t, m, cm, kg/cm²) e imperiales (kips, ft, in, ksi)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Stack
 
-## Expanding the Oxlint configuration
+React · TypeScript · Vite · Tailwind CSS · Vitest
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+Arquitectura en capas: `domain` (motores puros) → `application` (hooks/contexto) → `presentation` (UI).
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## Cómo correrlo
+
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Otros comandos:
+
+```bash
+npm test        # tests unitarios (Vitest)
+npm run build   # build de producción
+npm run lint    # Oxlint
+```
+
+## Roadmap
+
+Ver [roadmap.md](roadmap.md) para el plan por fases (concreto ACI, PDF, multimódulo, etc.).
+
+## Licencia
+
+Proyecto privado (`private` en `package.json`). Ajusta la licencia si lo publicas de forma abierta.
